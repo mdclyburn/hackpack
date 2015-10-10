@@ -1,0 +1,501 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: Ipelib 70108 (Ipe 7.1.8)
+%%CreationDate: D:20151009001624
+%%LanguageLevel: 2
+%%BoundingBox: 47 527 545 801
+%%HiResBoundingBox: 47.3 527.3 544.7 800.7
+%%Author: Marshall Clyburn
+%%Title: Partial Breadth-first Search
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset ipe 7.0 70108
+/ipe 40 dict def ipe begin
+/np { newpath } def
+/m { moveto } def
+/l { lineto } def
+/c { curveto } def
+/h { closepath } def
+/re { 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+      neg 0 rlineto closepath } def
+/d { setdash } def
+/w { setlinewidth } def
+/J { setlinecap } def
+/j { setlinejoin } def
+/cm { [ 7 1 roll ] concat } def
+/q { gsave } def
+/Q { grestore } def
+/g { setgray } def
+/G { setgray } def
+/rg { setrgbcolor } def
+/RG { setrgbcolor } def
+/S { stroke } def
+/f* { eofill } def
+/f { fill } def
+/ipeMakeFont {
+  exch findfont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /Encoding exch def
+    currentdict
+  end
+  definefont pop
+} def
+/ipeFontSize 0 def
+/Tf { dup /ipeFontSize exch store selectfont } def
+/Td { translate } def
+/BT { gsave } def
+/ET { grestore } def
+/TJ { 0 0 moveto { dup type /stringtype eq
+ { show } { ipeFontSize mul -0.001 mul 0 rmoveto } ifelse
+} forall } def
+<<
+/PatternType 1
+/PaintType 2
+/TilingType 2
+/BBox [ 0 0 100 4 ]
+/XStep 99
+/YStep 4
+/PaintProc { pop 0 0 100 1 re fill} bind
+>>
+[ 0.5 -0.866025 0.866025 0.5 0 0 ]
+makepattern
+/Pat97 exch def
+<<
+/PatternType 1
+/PaintType 2
+/TilingType 2
+/BBox [ 0 0 100 4 ]
+/XStep 99
+/YStep 4
+/PaintProc { pop 0 0 100 1 re fill} bind
+>>
+[ 0.866025 0.5 -0.5 0.866025 0 0 ]
+makepattern
+/Pat98 exch def
+/patg { [/Pattern /DeviceGray ] setcolorspace setcolor } def
+/patrg { [/Pattern /DeviceRGB ] setcolorspace setcolor } def
+end
+%%EndResource
+%%EndProlog
+%%BeginSetup
+ipe begin
+%%EndSetup
+0 J 1 j
+q 80 640 m
+80 648.837 72.8366 656 64 656 c
+55.1634 656 48 648.837 48 640 c
+48 631.163 55.1634 624 64 624 c
+72.8366 624 80 631.163 80 640 c
+0.4 w S
+Q
+q 144 736 m
+144 744.837 136.837 752 128 752 c
+119.163 752 112 744.837 112 736 c
+112 727.163 119.163 720 128 720 c
+136.837 720 144 727.163 144 736 c
+0.4 w S
+Q
+q 176 640 m
+176 648.837 168.837 656 160 656 c
+151.163 656 144 648.837 144 640 c
+144 631.163 151.163 624 160 624 c
+168.837 624 176 631.163 176 640 c
+0.4 w S
+Q
+q 128 592 m
+128 600.837 120.837 608 112 608 c
+103.163 608 96 600.837 96 592 c
+96 583.163 103.163 576 112 576 c
+120.837 576 128 583.163 128 592 c
+0.4 w S
+Q
+q 256 688 m
+256 696.837 248.837 704 240 704 c
+231.163 704 224 696.837 224 688 c
+224 679.163 231.163 672 240 672 c
+248.837 672 256 679.163 256 688 c
+0.4 w S
+Q
+q 288 624 m
+288 632.837 280.837 640 272 640 c
+263.163 640 256 632.837 256 624 c
+256 615.163 263.163 608 272 608 c
+280.837 608 288 615.163 288 624 c
+0.4 w S
+Q
+q 352 704 m
+352 712.837 344.837 720 336 720 c
+327.163 720 320 712.837 320 704 c
+320 695.163 327.163 688 336 688 c
+344.837 688 352 695.163 352 704 c
+0.4 w S
+Q
+q 224 784 m
+224 792.837 216.837 800 208 800 c
+199.163 800 192 792.837 192 784 c
+192 775.163 199.163 768 208 768 c
+216.837 768 224 775.163 224 784 c
+0.4 w S
+Q
+q 368 608 m
+368 616.837 360.837 624 352 624 c
+343.163 624 336 616.837 336 608 c
+336 599.163 343.163 592 352 592 c
+360.837 592 368 599.163 368 608 c
+0.4 w S
+Q
+q 432 704 m
+432 712.837 424.837 720 416 720 c
+407.163 720 400 712.837 400 704 c
+400 695.163 407.163 688 416 688 c
+424.837 688 432 695.163 432 704 c
+0.4 w S
+Q
+q 304 752 m
+304 760.837 296.837 768 288 768 c
+279.163 768 272 760.837 272 752 c
+272 743.163 279.163 736 288 736 c
+296.837 736 304 743.163 304 752 c
+0.4 w S
+Q
+q 464 592 m
+464 600.837 456.837 608 448 608 c
+439.163 608 432 600.837 432 592 c
+432 583.163 439.163 576 448 576 c
+456.837 576 464 583.163 464 592 c
+0.4 w S
+Q
+q 496 752 m
+496 760.837 488.837 768 480 768 c
+471.163 768 464 760.837 464 752 c
+464 743.163 471.163 736 480 736 c
+488.837 736 496 743.163 496 752 c
+0.4 w S
+Q
+q 384 768 m
+384 776.837 376.837 784 368 784 c
+359.163 784 352 776.837 352 768 c
+352 759.163 359.163 752 368 752 c
+376.837 752 384 759.163 384 768 c
+0.4 w S
+Q
+q 464 656 m
+464 664.837 456.837 672 448 672 c
+439.163 672 432 664.837 432 656 c
+432 647.163 439.163 640 448 640 c
+456.837 640 464 647.163 464 656 c
+0.4 w S
+Q
+q 240 576 m
+240 584.837 232.837 592 224 592 c
+215.163 592 208 584.837 208 576 c
+208 567.163 215.163 560 224 560 c
+232.837 560 240 567.163 240 576 c
+0.4 w S
+Q
+q 320 544 m
+320 552.837 312.837 560 304 560 c
+295.163 560 288 552.837 288 544 c
+288 535.163 295.163 528 304 528 c
+312.837 528 320 535.163 320 544 c
+0.4 w S
+Q
+q 544 608 m
+544 616.837 536.837 624 528 624 c
+519.163 624 512 616.837 512 608 c
+512 599.163 519.163 592 528 592 c
+536.837 592 544 599.163 544 608 c
+0.4 w S
+Q
+q 208 784 m
+208 784 l
+0.4 w 1 J
+S
+Q
+q 208 784 m
+208 784 l
+0.4 w 1 J
+S
+Q
+q 64 640 m
+128 736 l
+208 784 l
+288 752 l
+368 768 l
+416 704 l
+480 752 l
+0.4 w S
+Q
+q 416 704 m
+448 656 l
+528 608 l
+528 608 l
+0.4 w S
+Q
+q 64 640 m
+112 592 l
+160 640 l
+224 576 l
+272 624 l
+352 608 l
+304 544 l
+0.4 w S
+Q
+q 160 640 m
+240 688 l
+240 688 l
+0.4 w S
+Q
+q 288 752 m
+336 704 l
+0.4 w S
+Q
+q 352 608 m
+448 592 l
+0.4 w S
+Q
+q 448 656 m
+448 592 l
+0.4 w S
+Q
+q 336 704 m
+368 768 l
+368 768 l
+0.4 w S
+Q
+q 416 704 m
+336 704 l
+0.4 w S
+Q
+q 240 688 m
+272 624 l
+0.4 w S
+Q
+q 336 704 m
+272 624 l
+0.4 w S
+Q
+q 288 752 m
+240 688 l
+0.4 w S
+Q
+q 160 640 m
+64 640 l
+0.4 w S
+Q
+q 128 736 m
+160 640 l
+0.4 w S
+Q
+q 352 608 m
+416 704 l
+0.4 w S
+Q
+q 336 704 m
+240 688 l
+0.4 w S
+Q
+q 208 784 m
+240 688 l
+1 g
+q f* Q 0.4 w 0 g
+S
+Q
+q 80 640 m
+80 648.837 72.8366 656 64 656 c
+55.1634 656 48 648.837 48 640 c
+48 631.163 55.1634 624 64 624 c
+72.8366 624 80 631.163 80 640 c
+1 1 0.878 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 144 736 m
+144 744.837 136.837 752 128 752 c
+119.163 752 112 744.837 112 736 c
+112 727.163 119.163 720 128 720 c
+136.837 720 144 727.163 144 736 c
+1 1 0.878 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 224 784 m
+224 792.837 216.837 800 208 800 c
+199.163 800 192 792.837 192 784 c
+192 775.163 199.163 768 208 768 c
+216.837 768 224 775.163 224 784 c
+1 0.843 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 256 688 m
+256 696.837 248.837 704 240 704 c
+231.163 704 224 696.837 224 688 c
+224 679.163 231.163 672 240 672 c
+248.837 672 256 679.163 256 688 c
+1 0.549 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 304 752 m
+304 760.837 296.837 768 288 768 c
+279.163 768 272 760.837 272 752 c
+272 743.163 279.163 736 288 736 c
+296.837 736 304 743.163 304 752 c
+1 0.549 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 288 624 m
+288 632.837 280.837 640 272 640 c
+263.163 640 256 632.837 256 624 c
+256 615.163 263.163 608 272 608 c
+280.837 608 288 615.163 288 624 c
+1 0.549 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 352 704 m
+352 712.837 344.837 720 336 720 c
+327.163 720 320 712.837 320 704 c
+320 695.163 327.163 688 336 688 c
+344.837 688 352 695.163 352 704 c
+1 0 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 384 768 m
+384 776.837 376.837 784 368 784 c
+359.163 784 352 776.837 352 768 c
+352 759.163 359.163 752 368 752 c
+376.837 752 384 759.163 384 768 c
+1 0.549 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 176 640 m
+176 648.837 168.837 656 160 656 c
+151.163 656 144 648.837 144 640 c
+144 631.163 151.163 624 160 624 c
+168.837 624 176 631.163 176 640 c
+1 0.843 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 128 592 m
+128 600.837 120.837 608 112 608 c
+103.163 608 96 600.837 96 592 c
+96 583.163 103.163 576 112 576 c
+120.837 576 128 583.163 128 592 c
+1 1 0.878 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 240 576 m
+240 584.837 232.837 592 224 592 c
+215.163 592 208 584.837 208 576 c
+208 567.163 215.163 560 224 560 c
+232.837 560 240 567.163 240 576 c
+1 0.843 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 320 544 m
+320 552.837 312.837 560 304 560 c
+295.163 560 288 552.837 288 544 c
+288 535.163 295.163 528 304 528 c
+312.837 528 320 535.163 320 544 c
+1 0.843 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 368 608 m
+368 616.837 360.837 624 352 624 c
+343.163 624 336 616.837 336 608 c
+336 599.163 343.163 592 352 592 c
+360.837 592 368 599.163 368 608 c
+1 0.549 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 464 592 m
+464 600.837 456.837 608 448 608 c
+439.163 608 432 600.837 432 592 c
+432 583.163 439.163 576 448 576 c
+456.837 576 464 583.163 464 592 c
+1 0.843 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 464 656 m
+464 664.837 456.837 672 448 672 c
+439.163 672 432 664.837 432 656 c
+432 647.163 439.163 640 448 640 c
+456.837 640 464 647.163 464 656 c
+1 0.843 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 544 608 m
+544 616.837 536.837 624 528 624 c
+519.163 624 512 616.837 512 608 c
+512 599.163 519.163 592 528 592 c
+536.837 592 544 599.163 544 608 c
+1 1 0.878 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 432 704 m
+432 712.837 424.837 720 416 720 c
+407.163 720 400 712.837 400 704 c
+400 695.163 407.163 688 416 688 c
+424.837 688 432 695.163 432 704 c
+1 0.549 0 rg
+q f* Q 0.4 w 0 g
+S
+Q
+q 496 752 m
+496 760.837 488.837 768 480 768 c
+471.163 768 464 760.837 464 752 c
+464 743.163 471.163 736 480 736 c
+488.837 736 496 743.163 496 752 c
+1 1 0.878 rg
+q f* Q 0.8 w 0 g
+S
+Q
+showpage
+%%BeginIpeXml: /FlateDecode
+%GhUDF9on$e&A@C2&3;*BHhAu&a=bgm1^-dMBTLsjBUcGaV'LhZGN1=(hqfMFb*5=te0\B&#eUlI
+%B)).58</pYfn#ed_Q'[gDV`h6^!oJd7W;Y=>PD299]uD&iSHT`Z=7#r6Y(9(rq'LSq6:`\Tt_"!
+%+0>$RPARYtR.#;nch!>CE`&CXPh`jb@od60U*%1oVV]Y-)67NE-c'W4G7d$iHTpb6QrSK,.Jf0u
+%<_$3#2_b+09_&oEGPB.8*:We*n&Y*X0`:b&9fiP)&#?4$Pb8*@0]<@?fp\,.:ALocZ55;t52F#M
+%DlU^Q[s[t$lTM7_<^+;Q?tW3g7GEdLDU3kJ9a<Mje3b;"SXGPOGo29lo&`WRpC<8ef.b*:_n\rW
+%4+YT(5-&%I`h@i59t^9'qHbSq,[.YI]So^Jfu)&q@r"]n<58ah$l@I&A3$f$#?A79kb-1!9=Lf9
+%0UaAFZVl8ZoL,u4P!)i^2Hf_Be[\f,]PXP&>0X`jjmg^\^fuCV//cBm%*YM9%m0>LKp8^'.?Z/I
+%f2fC25CJ[$-C-G_:]09KgS>:(d@-VqHi=R"nWQ%OP;Wd^XkC7!RD.4l,A(;O^=-+kQVNFjf1;hX
+%cQr%E4)L0>GpZ_$F*%AEAG^knBTo6-<`YJs3!Vk#_]"4qXL&Ql7A<:K%?]jfZqJe?Nf;,Yh!/3Y
+%]%^B.Dr9rL%.]u<pql:)E0$;f!CbEqG`tlIp:>H^_hht/P^h_P/kE@ukCQKRDG)iFj`/9.nQ3pN
+%5/>3ko6;rpUM3,'?ECkk/bkT1pB3]mKXp:Ydj$tB;Da)SMqI%#*VJU3`TWH$@AQ=05Vl?(rM)u2
+%MV4#sT\'[Qi#n\&T'EC:BnUkb&rI2pkBfZpGIlF_l-'nMaL\/nPJ`>qcEm"LV2*\X!^UYa7D8f/
+%Jh[]9TH</^-nV'u\P.HE\2X%ko8>.l9r(D8iB:Q;K>%RP*8,mXbiVL4%sgIuGORBY%?&1Q%A$%/
+%J$#A^Tt?8:b9UtSHh[Y,SiYT@D;teJW`el==]$+/X".I&4_R:R78W.GK"I"%LX<9,qT(iAbH0-g
+%#\'K3at4EYJ!S-VUnlQMQD(f]\J6rJp^Io@]fZk%N6q5(lWL(:&&Bn#P9f)eXIH:6a"f=o#05lq
+%.UU\-o-u.n+^mpf3*Hg%f6:9]\qd*7DI7U!RjUp(6s_GSW?Q/iqM@3.L2A<B(ZI#uF9pLCW`UOS
+%N4U7@Kop(ZF#jB9_:;ll0Z'G>?2f`\QC@GrAR4Ue+,,>DGXe%p#R*I=(pb*cdqrmkW?+0in!cfL
+%mR%fb@1`23+2@`TiP_Jl[m00G`015p^4U_rJEgG\pW]H6[k5e7-u7)&lJWkL7H_7m(JcVTdshfg
+%O'gTkZHJn?\/0XeS)2ID,/jaIiOA203J#$qk;4g(aR5(X[Vs75OHY%JGTQRdA(a=UIY82ReZM+l
+%5o(GlhY[a=AH'#k/kf)+Ok?I^Q&##93".(b%m&o.0Y6rl%K<N1482G<5f(nZ3&#s_8:iKW)s%?i
+%*l+`7g8IQD'FDA7\<-oSB1b#UdR+tZCJdaNLe>7W`/K9M>XumdiXuuLI>)9?5qqbRiuLj3B(0E<
+%CF`K/T3NZ.Dqu:-K*n+gG\WqMCfBdgf"N0J.buWq[(9,lX[RNMj*rI@Og]?\2l%'O]pEPYL0fa=
+%K_E$9A%j.GZf*-*WBVO\>Y4BTGXIHJ3hm9nf@aZ[JTqD3%MZPKNFYKJq>jn\r8oLLr(/+-fDhd.
+%Cu@Z9VI;7!!chr5*3_S9W(H>-!q;g5(/ld4!$sof_'4P4Vqr,G^]U\SPNI[PPrE7pO[#6Kk`j(c
+%e;^3A`-=ZXDrMaF!j%R(6rllA,ngB:GFVF5#XR-'R\F[.qdVa?BT3Q#J@T`#NoY&8IPjcD#W.<6
+%O0dX<\YHSieJtP6ToKHgF]>A,988dnaJ(5+7g4f38g(fih924b4;Xrkc4hBN@gXfuUOf`+7F74f
+%USIANj;dG1Tj$cnXcb/Xe-RjAU%gLN1b0IV;T`WjTt'/e!7*7OYh?0MBpEI2YiTM5ERrf$1?YUY
+%'H/ij4!E2gbW;!&Aan"R[ou8a)eWg8&"$_9qP?"HV0$`80]L!Q5`eaZ2lc+DVR4pg2bYk/7XS<D
+%Os</l8dss:IgVTMD-SGrGGbq)_QIbqb6G"FDD3$20'j`s]?>Oh6E>]SLk/jjFNo-E^_mH/ANb'6
+%"M5T$5c"3O%e\]i,6d(dI(SAk>^+JCZ!H>+~>
+%%EndIpeXml
+%%Trailer
+end
+%%EOF
